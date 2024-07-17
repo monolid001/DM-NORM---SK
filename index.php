@@ -1,4 +1,12 @@
-<html>
+<?php
+    $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+    $cms->landing( 1, 2 );
+
+    $cms->thankspage = DIR . './success/success.php';
+    define( 'THANKSPAGE', $_SERVER['DOCUMENT_ROOT'] . './success/success.php' );
+?>
+
+<html lang="sk">
 
 <head>
     <script type="text/javascript" src="content/shared/js/jquery-1.12.4.min.js"></script>
@@ -42,10 +50,6 @@
 </head>
 
 <body>
-    <?php
-        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
-        $cms->landing( 1, 2 );
-    ?>
     <div class="body-wrap">
         <!--header-->
         <header>
@@ -100,11 +104,11 @@
                             <div class="wrap-price--top">
                                 <div class="price-old-wrap--top">
                                     <p class="price-old-text--top lt15">Stará cena:</p>
-                                    <p class="price-old-x--top"><span class="x_price_previouspp price_old">78</span><span class="price-old-currency--top x_currencypp">EUR</span></p>
+                                    <p class="price-old-x--top"><span class="x_price_previouspp price_old"><?=$cms->oldpr;?></span><span class="price-old-currency--top x_currencypp">EUR</span></p>
                                 </div>
                                 <div class="price-new-wrap--top">
                                     <p class="price-new-text--top lt16">Nová cena:</p>
-                                    <p class="price-new-x--top"><span class="x_price_currentpp price_main">39</span><span class="price-new-currency--top x_currencypp">EUR</span></p>
+                                    <p class="price-new-x--top"><span class="x_price_currentpp price_main"><?=$cms->price;?></span><span class="price-new-currency--top x_currencypp">EUR</span></p>
                                 </div>
                             </div>
                             <div class="form-main">
@@ -282,7 +286,7 @@
                     <div class="sale--mob_es">
                         <div class="sale-wrap--mob">
                             <p class="sale-product-title--mob lt11"> Zľava!</p>
-                            <p class="sale-product--mob lt67">-50%</p>
+                            <p class="sale-product--mob lt67"><?=$cms->discount;?></p>
                         </div>
                         <p class="clear"></p>
                         <p class="sale-text--mob"></p>
@@ -295,16 +299,16 @@
                             <div class="sale-price-wrap">
                                 <div class="sale-wrap--all">
                                     <p class="sale-product-title--all lt11"> Zľava!</p>
-                                    <p class="sale-product--all lt70">-50%</p>
+                                    <p class="sale-product--all lt70"><?=$cms->discount;?></p>
                                 </div>
                                 <div class="wrap-price--all">
                                     <div class="price-old-wrap--all">
                                         <p class="price-old-text--all lt15">Stará cena:</p>
-                                        <p class="price-old-x--all"><span class="x_price_previouspp price_old">78</span><span class="price-old-currency--all x_currencypp">EUR</span></p>
+                                        <p class="price-old-x--all"><span class="x_price_previouspp price_old"><?=$cms->oldpr;?></span><span class="price-old-currency--all x_currencypp">EUR</span></p>
                                     </div>
                                     <div class="price-new-wrap--all">
                                         <p class="price-new-text--all lt16">Nová cena:</p>
-                                        <p class="price-new-x--all"><span class="x_price_currentpp price_main">39</span><span class="price-new-currency--allpp x_currencypp">EUR</span></p>
+                                        <p class="price-new-x--all"><span class="x_price_currentpp price_main"><?=$cms->price;?></span><span class="price-new-currency--allpp x_currencypp">EUR</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -410,16 +414,16 @@
                             <div class="sale-price-wrap">
                                 <div class="sale-wrap--all">
                                     <p class="sale-product-title--all lt11"> Zľava!</p>
-                                    <p class="sale-product--all lt107">-50%</p>
+                                    <p class="sale-product--all lt107"><?=$cms->discount;?></p>
                                 </div>
                                 <div class="wrap-price--all">
                                     <div class="price-old-wrap--all">
                                         <p class="price-old-text--all lt15">Stará cena:</p>
-                                        <p class="price-old-x--all"><span class="x_price_previouspp price_old">78</span><span class="price-old-currency--all x_currencypp">EUR</span></p>
+                                        <p class="price-old-x--all"><span class="x_price_previouspp price_old"><?=$cms->oldpr;?></span><span class="price-old-currency--all x_currencypp">EUR</span></p>
                                     </div>
                                     <div class="price-new-wrap--all">
                                         <p class="price-new-text--all lt16">Nová cena:</p>
-                                        <p class="price-new-x--all"><span class="x_price_currentpp price_main">39</span><span class="price-new-currency--allpp x_currencypp">EUR</span></p>
+                                        <p class="price-new-x--all"><span class="x_price_currentpp price_main"><?=$cms->price;?></span><span class="price-new-currency--allpp x_currencypp">EUR</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -475,16 +479,16 @@
                             <div class="sale-price-wrap">
                                 <div class="sale-wrap--all">
                                     <p class="sale-product-title--all lt11"> Zľava!</p>
-                                    <p class="sale-product--all lt118">-50%</p>
+                                    <p class="sale-product--all lt118"><?=$cms->discount;?></p>
                                 </div>
                                 <div class="wrap-price--all">
                                     <div class="price-old-wrap--all">
                                         <p class="price-old-text--all lt15">Stará cena:</p>
-                                        <p class="price-old-x--all"><span class="x_price_previouspp price_old">78</span><span class="price-old-currency--all x_currencypp">EUR</span></p>
+                                        <p class="price-old-x--all"><span class="x_price_previouspp price_old"><?=$cms->oldpr;?></span><span class="price-old-currency--all x_currencypp">EUR</span></p>
                                     </div>
                                     <div class="price-new-wrap--all">
                                         <p class="price-new-text--all lt16">Nová cena:</p>
-                                        <p class="price-new-x--all"><span class="x_price_currentpp price_main">39</span><span class="price-new-currency--allpp x_currencypp">EUR</span></p>
+                                        <p class="price-new-x--all"><span class="x_price_currentpp price_main"><?=$cms->price;?></span><span class="price-new-currency--allpp x_currencypp">EUR</span></p>
                                     </div>
                                 </div>
                             </div>
