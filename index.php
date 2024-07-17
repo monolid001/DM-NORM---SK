@@ -38,9 +38,14 @@
     <link href="content/JSyDTZB4sSzU9w6/img/icon-header.png" rel="shortcut icon" type="image/x-icon" />
     <link href="content/JSyDTZB4sSzU9w6/css/style.css" rel="stylesheet" />
     <title class="lt00">Kúpiť DM-NORM so zľavou, ceny, recenzie, objednať DM-NORM teraz!</title>
+    <?php $cms->header(); ?>
 </head>
 
 <body>
+    <?php
+        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+        $cms->landing( 1, 2 );
+    ?>
     <div class="body-wrap">
         <!--header-->
         <header>
@@ -105,11 +110,13 @@
                             <div class="form-main">
                                 <p class="form-title--top lt17"><span>Zadajte svoje údaje</span> do nižšie uvedeného formulára</p>
                                 <form action="#" class="x_order_form order_form cpa__order_form" method="post">
+                                    <?=$cms->params();?>
                                     <select class="input-form" id="country_code_selector">
                                         <option value="SK">Slovensko</option>
                                     </select>
                                     <input class="input-form" name="name" placeholder="Názov" type="text" />
                                     <input class="input-form only_number" name="phone" placeholder="Telefón" type="tel" />
+                                    <input type="hidden" name="country" value="<?=$cms->country;?>" />
                                     <button class="submit-form lt18 js_submit button__text">Objednať<br />so zľavou</button>
                                 </form>
                             </div>
@@ -313,11 +320,13 @@
                             <div class="form--all">
                                 <p class="form-title--all lt74"><span>Zadajte svoje údaje</span>do nižšie uvedeného formulára</p>
                                 <form action="#" class="x_order_form order_form cpa__order_form" method="post">
+                                    <?=$cms->params();?>
                                     <select class="input-form" id="country_code_selector">
                                         <option value="SK">Slovensko</option>
                                     </select>
                                     <input class="input-form input-form--all" name="name" placeholder="Názov" type="text" />
                                     <input class="input-form input-form--all only_number" name="phone" placeholder="Telefón" type="tel" />
+                                    <input type="hidden" name="country" value="<?=$cms->country;?>" />
                                     <button class="submit-form js_submit button__text submit-form--all lt18">Objednať<br />so zľavou</button>
                                 </form>
                             </div>
@@ -426,11 +435,13 @@
                             <div class="form--all">
                                 <p class="form-title--all lt74"><span>Zadajte svoje údaje</span>do nižšie uvedeného formulára</p>
                                 <form action="#" class="x_order_form order_form cpa__order_form" method="post">
+                                    <?=$cms->params();?>
                                     <select class="input-form" id="country_code_selector">
                                         <option value="SK">Slovensko</option>
                                     </select>
                                     <input class="input-form input-form--all" name="name" placeholder="Názov" type="text" />
                                     <input class="input-form input-form--all only_number" name="phone" placeholder="Telefón" type="tel" />
+                                    <input type="hidden" name="country" value="<?=$cms->country;?>" />
                                     <button class="submit-form js_submit button__text submit-form--all lt18">Objednať<br />so zľavou</button>
                                 </form>
                             </div>
@@ -489,11 +500,13 @@
                             <div class="form--all">
                                 <p class="form-title--all lt74"><span>Zadajte svoje údaje</span>do nižšie uvedeného formulára</p>
                                 <form action="#" class="x_order_form order_form cpa__order_form" method="post">
+                                    <?=$cms->params();?>
                                     <select class="input-form" id="country_code_selector">
                                         <option value="SK">Slovensko</option>
                                     </select>
                                     <input class="input-form input-form--all" name="name" placeholder="Názov" type="text" />
                                     <input class="input-form input-form--all only_number" name="phone" placeholder="Telefón" type="tel" />
+                                    <input type="hidden" name="country" value="<?=$cms->country;?>" />
                                     <button class="submit-form js_submit button__text submit-form--all lt18">Objednať<br />so zľavou</button>
                                 </form>
                             </div>
@@ -599,6 +612,7 @@
             })
         }, 1);
     </script>
+    <?php $cms->footer(); ?>
 </body>
 
 </html>
